@@ -14,5 +14,9 @@ $(document).ready(function() {
 
     // Problem 5
     // call your problem 5 code here
+    var array = [["zara", "dhyaan", "dein"],
+        ["mazarat", "chahenge"],
+        ["attention", "please"]];
+    correctUrduWordOrder(array);
 
 });

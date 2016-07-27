@@ -34,3 +34,28 @@
  */
 
 // Write your JavaScript here
+function changeElementText(element,answer){
+    $(element).text(answer);
+}
+function correctUrduWordOrder(wordArray) {
+    wordArray[1] = reverseUrduWords(wordArray[1]);
+    changeElementText("#correctAdWords",turnArrayIntoString(wordArray));
+}
+
+function reverseUrduWords(urduWords){
+    var index = urduWords.length -1;
+    var temp ="";
+    for(var i=0; i< (urduWords.length/2); i++){
+        temp = urduWords[index];
+        urduWords[index] = urduWords[i];
+        urduWords[i] = temp;
+        index --;
+    }
+    return urduWords;
+}
+
+function turnArrayIntoString(wordArray){
+    return wordArray.toString().split(",").join(" ");
+}
+
+
