@@ -37,9 +37,17 @@
 function changeElementText(element,answer){
     $(element).text(answer);
 }
+
 function correctUrduWordOrder(wordArray) {
+    var adText = ""
+    for(var index=0; index < wordArray.length;index++){
+        adText += turnArrayIntoString(wordArray[index])+" ";
+    }
+    changeElementText("#adText",adText);
     wordArray[1] = reverseUrduWords(wordArray[1]);
-    changeElementText("#correctAdWords",turnArrayIntoString(wordArray));
+    var correctedString = turnArrayIntoString(wordArray);
+    changeElementText("#correctAdWords",correctedString);
+    changeElementText("#wordCount", correctedString.split(" ").length);
 }
 
 function reverseUrduWords(urduWords){

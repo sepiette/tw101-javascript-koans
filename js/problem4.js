@@ -25,5 +25,11 @@
  Then my total is Rs 100
 
 */
+function changeElementText(element,answer){
+ $(element).text(answer);
+}
+function displayTotalRupees(moneyAmountArray){
+
+}
 
 // Write your JavaScript here
