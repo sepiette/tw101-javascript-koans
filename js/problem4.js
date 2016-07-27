@@ -26,10 +26,26 @@
 
 */
 function changeElementText(element,answer){
- $(element).text(answer);
+    $(element).text(answer);
 }
 function displayTotalRupees(moneyAmountArray){
-
+    changeElementText("#moneyAmounts", moneyAmountArray.toString() );
+    changeElementText("#totalAmount", calculateMoney(moneyAmountArray));
 }
 
-// Write your JavaScript here
+
+function calculateMoney(moneyArr){
+    const ACCEPTED_RUPEE_AMOUNTS = [5, 10, 20, 50, 100, 500, 1000];
+    var totalSum = 0;
+    var index = 0;
+
+    while(ACCEPTED_RUPEE_AMOUNTS.indexOf(moneyArr[index]) != -1 && index < moneyArr.length){
+       totalSum += moneyArr[index];
+       index ++;
+     console.log(totalSum);
+    }
+
+    return totalSum;
+}
+
+

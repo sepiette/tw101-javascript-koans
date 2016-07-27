@@ -10,10 +10,13 @@ $(document).ready(function() {
     fareForRide(6, 8, false);
 
     // Problem 4
-    // call your problem 4 code here
+    var moneyArray1 = [10, 20, 100];
+    var moneyArray2 = [20, 50, 10, 20, 13, 500];
+    displayTotalRupees(moneyArray2);
+
 
     // Problem 5
-    // call your problem 5 code here
+
     var array = [["zara", "dhyaan", "dein"],
         ["mazarat", "chahenge"],
         ["attention", "please"]];
